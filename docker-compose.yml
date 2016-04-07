@@ -11,3 +11,5 @@ server:
   ports:
     - "28777:28777"
     - "28778:28778"
+  volumes:
+    - ./volumes:/home/logio/.log.io

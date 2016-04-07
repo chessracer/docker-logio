@@ -5,6 +5,13 @@ and see it to http://localhost:28778
 
 ## Usage as a Container
 
+### copy volumes/web_server.conf.sample to volumes/web_server.conf, adjusting password as desired
+
+```
+sed -e 's/password/new_password/g' volumes/web_server.conf.sample > volumes/web_server.conf
+```
+
+
 ### Docker Compose
 
 ```
@@ -22,11 +29,13 @@ logio:
   ports:
    - 28777:28777
    - 28778:28778
+  volumes:
+   - ./volumes:/home/logio/.log.io
 EOF
 docker-compose up
 ```
 
-### Manualy
+### Manually
 
 ```
 docker run -d --name logio -p 28777:28777 -p 28778:28778 temal/logio-server
