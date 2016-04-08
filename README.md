@@ -14,7 +14,7 @@ sed -e "s/password/new_password/g" volumes/web_server.conf.template > volumes/we
 ### copy volumes/harvester.conf.template to volumes/harvester.conf, adjusting node_name as desired
 
 ```
-sed -e "s/node_name/${hostname)/g" volumes/harvester.conf.template > volumes/harvester.conf
+sed -e "s/node_name/$(hostname)/g" volumes/harvester.conf.template > volumes/harvester.conf
 ```
 
 
