@@ -6,6 +6,13 @@ logs:
     - /var/run/docker.sock:/var/run/docker.sock
   command: -h server -n local -p 28777
   privileged: true
+harvester:
+  image: temal/logio-harvester
+  links: 
+    - server
+  volumes:
+    - ./volumes:/home/logio/.log.io
+    - /var/log:/var/log
 server:
   image: temal/logio-server
   ports:
@@ -13,3 +20,4 @@ server:
     - "28778:28778"
   volumes:
     - ./volumes:/home/logio/.log.io
+

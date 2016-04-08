@@ -5,10 +5,16 @@ and see it to http://localhost:28778
 
 ## Usage as a Container
 
-### copy volumes/web_server.conf.sample to volumes/web_server.conf, adjusting password as desired
+### copy volumes/web_server.conf.template to volumes/web_server.conf, adjusting password as desired
 
 ```
-sed -e 's/password/new_password/g' volumes/web_server.conf.sample > volumes/web_server.conf
+sed -e "s/password/new_password/g" volumes/web_server.conf.template > volumes/web_server.conf
+```
+
+### copy volumes/harvester.conf.template to volumes/harvester.conf, adjusting node_name as desired
+
+```
+sed -e "s/node_name/${hostname)/g" volumes/harvester.conf.template > volumes/harvester.conf
 ```
 
 

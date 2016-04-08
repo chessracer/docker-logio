@@ -1,0 +1,13 @@
+exports.config = {
+  nodeName: "node_name",
+  logStreams: {
+    syslog: [
+      "/var/log/syslog"
+    ]
+  },
+  server: {
+    host: 'server',
+    port: 28777
+  }
+}
+
