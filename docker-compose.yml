@@ -13,6 +13,7 @@ harvester:
   volumes:
     - ./volumes:/home/logio/.log.io
     - /var/log:/var/log
+    - ${LARAVEL_HOME}/Laravel/storage/logs:/var/log/laravel
 server:
   image: temal/logio-server
   ports:

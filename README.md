@@ -3,20 +3,17 @@
 Forward all your logs to [Log-Io](http://logio.org/)
 and see it to http://localhost:28778
 
-## Usage as a Container
+## Usage:
 
-### copy volumes/web_server.conf.template to volumes/web_server.conf, adjusting password as desired
+### set environment variables to customize your environment
 
-```
-sed -e "s/password/new_password/g" volumes/web_server.conf.template > volumes/web_server.conf
-```
+#### default values:
+LARAVEL_HOME=/opt/laravel-coci
+LOGIO_PASSWORD=changeme
 
-### copy volumes/harvester.conf.template to volumes/harvester.conf, adjusting node_name as desired
+### run the compose.sh script to initialize your environment, and start the containers
 
-```
-sed -e "s/node_name/$(hostname)/g" volumes/harvester.conf.template > volumes/harvester.conf
-```
-
+./compose.sh
 
 ### Docker Compose
 

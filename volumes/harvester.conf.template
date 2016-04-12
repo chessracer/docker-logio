@@ -3,6 +3,9 @@ exports.config = {
   logStreams: {
     syslog: [
       "/var/log/syslog"
+    ],
+    laravel: [
+      "/var/log/laravel/laravel.log"
     ]
   },
   server: {
