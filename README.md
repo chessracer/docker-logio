@@ -8,7 +8,7 @@ and see it to http://localhost:28778
 ### set environment variables to customize your environment
 
 #### default values:
-LARAVEL_HOME=/opt/laravel-coci
+LARAVEL_HOME=/opt/laravel-coci #NOTE: REQUIRED to be explicitly set if you are pulling laravel logs
 LOGIO_PASSWORD=changeme
 
 ### run the compose.sh script to initialize your environment, and start the containers
