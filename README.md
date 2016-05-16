@@ -9,6 +9,7 @@ and see it to http://localhost:28778
 
 #### default values:
 LARAVEL_HOME=/opt/laravel-coci #NOTE: REQUIRED to be explicitly set if you are pulling laravel logs
+custom_app= #NOTE: set custom_app to a value that resolves to templates/harvester.conf.$custom_app if you wish to override the default configuration 
 LOGIO_PASSWORD=changeme
 
 ### run the compose.sh script to initialize your environment, and start the containers
