@@ -2,6 +2,8 @@
 
 # Maintained by chessracer
 
+# Trigger
+
 Forward all your logs to [Log-Io](http://logio.org/)
 and see it to http://localhost:28778
 
